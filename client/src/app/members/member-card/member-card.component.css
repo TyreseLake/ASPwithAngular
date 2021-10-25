@@ -1,0 +1,55 @@
+.card:hover img {
+    transform: scale(1.1, 1.1);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    opacity: 0.8;
+}
+
+.card img{
+    transform: scale(1.0, 1.0);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    opacity: 1.0;
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.member-icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card-img-wrapper .animate li{
+    opacity: 0;
+}
+
+.card-img-wrapper:hover .animate li{
+    animation: FadeIn 300ms linear;
+    animation-fill-mode: both;
+}
+
+.card-img-wrapper:hover .animate li:nth-child(2) { animation-delay: .05s }
+.card-img-wrapper:hover .animate li:nth-child(3) { animation-delay: .1s }
+
+@keyframes FadeIn { 
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+  
+    85% {
+        opacity: 80%;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using API.Data;
-using API.DOTs;
+using API.DTOs;
 using API.Entities;
 using API.Extensions;
 using API.Helpers;

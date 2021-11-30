@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
-using API.DOTs;
+using API.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using API.Interfaces;

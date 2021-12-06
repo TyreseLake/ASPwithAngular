@@ -35,7 +35,6 @@ namespace API.Controllers
             var user = _mapper.Map<AppUser>(registerDto);
 
             using var hmac = new HMACSHA512();
-
             
             user.UserName = registerDto.Username.ToLower();
             user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password));

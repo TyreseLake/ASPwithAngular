@@ -1,0 +1,9 @@
+.user-img{
+  max-height: 50px;
+  border:2px solid #fff;
+  display: inline;
+}
+
+table tr td{
+  class: align-middle;
+}

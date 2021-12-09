@@ -12,13 +12,16 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink='/messages' routerLinkActive='active'>Messages</a>
                 </li>
+                <li *appHasRole='["Admin", "Moderator"]' class="nav-item">
+                  <a class="nav-link" routerLink='/admin' routerLinkActive='active'>Admin</a>
+                </li>
             </ng-container>
         </ul>
 
         <div class="ml-auto" *ngIf="(accountService.currentUser$ | async) as user" >
             <img class="nav-img img-fluid rounded-circle mx-2" src="{{user.photoUrl || './assets/user.png'}}" alt="{{user.username}}">
             <div class="dropdown d-inline" dropdown>
-                <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.knownAs | titlecase}}</a>
+                <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.knownAs || user.username | titlecase}}</a>
                 <div class="dropdown-menu mt-2" *dropdownMenu>
                     <a class="dropdown-item" routerLink="/member/edit" routerLinkActive='active'>Edit Profile</a>
                     <div class="divider dropdown-divider"></div>
